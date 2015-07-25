@@ -30,6 +30,15 @@ gem 'jbuilder', '~> 1.2'
 # Add bootstrap sass to make things bootstrappy
 gem 'bootstrap-sass', '~> 3.3.5'
 
+# Make forms simple!
+gem 'simple_form'
+
+# Add user authentication
+gem 'devise'
+
+# Add test support
+gem 'factory_girl_rails', '~>4.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
