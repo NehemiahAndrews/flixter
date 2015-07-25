@@ -2,16 +2,6 @@ class Course < ActiveRecord::Base
     belongs_to :user
     validates :title, :presence => true
     validates :description, :presence => true
-    validates :cost, :presence => true
-    validate :cost_must_not_be_negative
+    validates :cost, :presence => true, :numericality => {:greater_than_or_equal_to => 0}
 
-    def cost_must_not_be_negative
-      if cost == nil
-        false
-      elsif cost < 0
-        false
-      else
-        true
-      end
-    end
 end
