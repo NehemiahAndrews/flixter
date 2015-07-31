@@ -1,5 +1,5 @@
 == README
-{<img src="https://travis-ci.org/NehemiahAndrews/flixter.svg?branch=course-framework" alt="Build Status" />}[https://travis-ci.org/NehemiahAndrews/flixter]
+{<img src="https://travis-ci.org/NehemiahAndrews/flixter.svg?branch=course-framework" alt="Build Status" />}[https://travis-ci.org/NehemiahAndrews/flixter] {<img src="https://hakiri.io/github/NehemiahAndrews/flixter/course-framework.svg" alt="security" />}[https://hakiri.io/github/NehemiahAndrews/flixter/course-framework]
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
