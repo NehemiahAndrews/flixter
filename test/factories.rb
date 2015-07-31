@@ -1,5 +1,10 @@
 FactoryGirl.define do  
 
+  factory :section do
+    title "Section 1"  
+    association :course
+  end
+  
   factory :user do
     sequence :email do |n|
       "nehemiah.andrews#{n}@gmail.com"
