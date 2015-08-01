@@ -18,4 +18,11 @@ class CoursesControllerTest < ActionController::TestCase
 
     assert_response :not_found
   end
+
+  test "index" do
+    course = FactoryGirl.create(:course)
+    get :index
+
+    assert_response :ok
+  end
 end
