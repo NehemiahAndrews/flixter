@@ -1,5 +1,12 @@
 FactoryGirl.define do  
 
+  factory :lesson do
+    title "First Lesson"
+    subtitle "Getting Started"
+    association :section
+  end
+  
+
   factory :section do
     title "Section 1"  
     association :course
