@@ -31,27 +31,30 @@ class Instructor::SectionsControllerTest < ActionController::TestCase
       section = Section.last
       assert_equal section.title, 'Section 1'
       assert_redirected_to instructor_course_path(course)
-      assert_equal 1, user.sections.count
+      assert_equal 1, course.sections.count
    end
 
   test "create, not signed in" do
-    post :create, :section => {
+    user = FactoryGirl.create(:user)
+    course = FactoryGirl.create(:course)
+    post :create, :course_id => course.id, :section => {
       :title => 'Section 1'
     }
     assert_redirected_to new_user_session_path
   end 
- 
+
   test "create invalid" do
     user = FactoryGirl.create(:user)
     sign_in user
+    course = FactoryGirl.create(:course)
 
     assert_no_difference 'Section.count' do
-      post :create, :section => {
-        :title => 'WebDev 101',
-        :face => 'Beautiful'
-      }
+      post :create, :course_id => course.id, :section => { 
+        :title => ''
+    }
     end
 
     assert_response :unprocessable_entity
   end
+
 end
