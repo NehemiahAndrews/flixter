@@ -16,7 +16,7 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def show
-    if Course.where(:id => params[:id]).blank?
+    if !course_exists
       render :text => "Not Found",  :status => :not_found  
     end
   end
@@ -24,9 +24,15 @@ class Instructor::CoursesController < ApplicationController
   private
 
   def require_authorized_for_current_course
-    if current_course.user != current_user
-      render :text => "Unauthorized", :status => :unauthorized
+    if course_exists
+      if current_course.user != current_user
+        render :text => "Unauthorized", :status => :unauthorized
+      end
     end
+  end
+
+  def course_exists
+    !Course.where(:id => params[:id]).blank?
   end
 
   helper_method :current_course
