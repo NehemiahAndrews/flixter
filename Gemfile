@@ -39,7 +39,11 @@ gem 'devise'
 # Add test support
 gem 'factory_girl_rails', '~>4.0'
 
+# Force sprockets version
 gem 'sprockets', '2.11.0'
+
+# Add CodeClimate test coverage reporting
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
