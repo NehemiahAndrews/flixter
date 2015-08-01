@@ -55,10 +55,8 @@ class Instructor::CoursesControllerTest < ActionController::TestCase
   end
 
   test "show, found" do
-    user = FactoryGirl.create(:user)
-    sign_in user
-
     course = FactoryGirl.create(:course)    
+    sign_in course.user
     get :show, :id => course.id
 
     assert_response :success
@@ -67,8 +65,19 @@ class Instructor::CoursesControllerTest < ActionController::TestCase
   test "show, not found" do
     user = FactoryGirl.create(:user)
     sign_in user
+    
     get :show, :id => 'fake'
 
     assert_response :not_found
+  end
+
+  test "show, found, unauthorized" do
+    user = FactoryGirl.create(:user)
+    sign_in user
+    course = FactoryGirl.create(:course)
+
+    get :show, :id => course.id
+
+    assert_response :unauthorized
   end
 end
