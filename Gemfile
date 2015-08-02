@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.11'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -38,6 +38,12 @@ gem 'devise'
 
 # Add test support
 gem 'factory_girl_rails', '~>4.0'
+
+# Force sprockets version
+gem 'sprockets', '2.11.0'
+
+# Add CodeClimate test coverage reporting
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
