@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -44,6 +44,21 @@ gem 'sprockets', '2.11.0'
 
 # Add CodeClimate test coverage reporting
 gem "codeclimate-test-reporter", group: :test, require: nil
+
+# Add Carrierwave for image and video management
+gem 'carrierwave'
+
+# Add Figaro for Heroku/Rails Config
+gem 'figaro'
+
+# Add CarrierWave/S3 Integration
+# gem 'fog','~> 1.3.1'
+
+# Add Carrierwave/AWS Integration
+gem 'carrierwave-aws'
+
+# Add ImageMagick support
+gem 'mini_magick'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
