@@ -58,7 +58,7 @@ gem 'figaro'
 gem 'carrierwave-aws'
 
 # Add ImageMagick support
-gem 'mini_magick'
+gem 'mini_magick','~>4.2.9'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
