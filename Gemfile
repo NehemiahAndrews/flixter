@@ -45,6 +45,15 @@ gem 'sprockets', '2.11.0'
 # Add CodeClimate test coverage reporting
 gem "codeclimate-test-reporter", group: :test, require: nil
 
+# Add Carrierwave for image and video management
+gem 'carrierwave'
+
+# Add Figaro for Heroku/Rails Config
+gem 'figaro'
+
+# Add CarrierWave/S3 Integration
+gem 'fog','~> 1.3.1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
