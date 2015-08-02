@@ -52,7 +52,10 @@ gem 'carrierwave'
 gem 'figaro'
 
 # Add CarrierWave/S3 Integration
-gem 'fog','~> 1.3.1'
+# gem 'fog','~> 1.3.1'
+
+# Add Carrierwave/AWS Integration
+gem 'carrierwave-aws'
 
 # Add ImageMagick support
 gem 'mini_magick'
