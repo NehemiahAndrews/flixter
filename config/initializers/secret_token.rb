@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Flixter::Application.config.secret_key_base = '4e1254fd5a3a44dff3f90c4f3db87d9c1a5163e6a5906d41d2f29c42b9087e20079107f684f8b838ae5f8cc845cfc1a235f3fe78d6fe97554af9dfd302ee8d16'
+Flixter::Application.config.secret_key_base = ENV['SECRET_TOKEN']
