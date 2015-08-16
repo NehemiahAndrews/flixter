@@ -4,7 +4,9 @@ Flixter::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
   root 'static_pages#index'
 
-  resources :courses, :only => [:index, :show]
+  resources :courses, :only => [:index, :show] do
+    resources :enrollments, :only => :create
+  end
   resources :lessons, :only => [:show]
   
   namespace :instructor do

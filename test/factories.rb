@@ -1,4 +1,7 @@
-FactoryGirl.define do  
+FactoryGirl.define do  factory :enrollment do
+    
+  end
+  
 
   factory :lesson do
     title "First Lesson"
