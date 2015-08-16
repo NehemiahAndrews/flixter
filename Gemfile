@@ -63,6 +63,9 @@ gem 'mini_magick','~>4.2.9'
 # Add Credit Card processing through Stripe
 gem 'stripe'
 
+# Add efficient model sorting with RankedModel
+gem 'ranked-model'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
