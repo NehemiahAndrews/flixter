@@ -1,5 +1,8 @@
-FactoryGirl.define do  factory :enrollment do
-    
+FactoryGirl.define do  
+
+  factory :enrollment do
+    association :user
+    association :course
   end
   
 
